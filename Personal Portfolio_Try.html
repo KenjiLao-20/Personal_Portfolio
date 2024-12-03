@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Page</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0;
+            background: linear-gradient(135deg, #a2c2e8, #5d9fc1);
+            color: #fff;
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; flex-direction: column; text-align: center;
+        }    
+        header {       
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; padding: 30px 0; width: 100%;
+            font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Form container styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px; border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            margin-top: 30px; display: flex; justify-content: center; gap: 15px;
+        }
+
+        .button-container button {
+            background-color: #66b3ff; color: white; border: none;
+            padding: 20px; font-size: 16px; cursor: pointer;
+            border-radius: 30px; transition: all 0.3s ease;
+            font-weight: bold; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            display: flex; flex-direction: column; align-items: center; gap: 10px;
+            text-align: center;
+        }    
+
+        .button-container button img {
+            width: 50px; height: 50px; object-fit: contain;
+        }
+
+        .button-container button:hover {
+            background-color: #4f99cc; transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container button:focus {
+            outline: none;
+        }
+
+        /* Content section styling */
+        section {
+            display: none; padding: 40px; border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1); margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 2rem; margin-bottom: 20px;
+        }    
+        
+        .section-content {
+            font-size: 1.2rem;
+        }
+
+        /* Style for active sections */ 
+        section.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+</head>
+<body>  
+    <header>
+        <h2>Welcome to My Page</h2>
+    </header>
+    <!-- Form with buttons -->
+    <div class="form-container">
+        <div class="button-container">
+            <a href="about_page.html"> 
+                <img src="about_image.png" alt="About Us Icon"> <br>About Us 
+            </a>
+            <a href="education_page.html"> 
+                <img src="education_image.png" alt="Education Icon"> <br>Education 
+            </a>
+            <a href="resume_page.html"> 
+                <img src="resume_image.png" alt="Resume Icon"> <br>Resume 
+            </a>
+            <a href="gallery_page.html"> 
+                <img src="gallery_image.png" alt="Gallery Icon"> <br>Gallery 
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- Content sections -->
+    <section id="about">
+        <div class="section-title">About Us</div>
+        <div class="section-content">
+            <p>This is the About Us section. Learn more about who we are and what we do.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-title">Education</div>
+        <div class="section-content">
+            <p>This is the Education section. Here you'll find information about our educational background.</p>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-title">Resume</div>
+        <div class="section-content">
+            <p>This is the Resume section. Here you can find details about my professional experience.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="section-title">Gallery</div>
+        <div class="section-content">
+            <p>This is the Gallery section. Check out some of our projects and achievements.</p>
+        </div>
+    </section>
+</body>
+</html>
